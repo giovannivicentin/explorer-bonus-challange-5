@@ -11,7 +11,10 @@
 
 header {
   grid-area: header;
-  background: #387e96;
+  background: hsl(195, 45.6%, 40.4%);
+
+  --startY: -100%;
+  animation: move 0.2s;
 
   display: flex;
   justify-content: center;
@@ -29,7 +32,7 @@ header {
 
 form input {
   padding: 1.2rem 1.6rem;
-  background: #f5f5f5;
+  background: hsl(0, 0%, 96.1%);
   width: 24rem;
 
   border-radius: 0.4rem;
@@ -85,6 +88,11 @@ main div div {
   border-radius: 0.5rem;
 }
 
+#main-photo:hover,
+figure img:hover {
+  filter: saturate(2);
+}
+
 aside {
   grid-area: aside;
   padding: 0;
@@ -94,7 +102,10 @@ aside {
 footer {
   grid-area: footer;
   padding: 16px;
-  background: #387e96;
+  background: hsl(195, 45.6%, 40.4%);
+
+  --startY: 100%;
+  animation: move 0.2s;
 
   font-weight: 600;
 
@@ -140,6 +151,12 @@ figure {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
 }
 
 @media screen and (min-width: 768px) {
