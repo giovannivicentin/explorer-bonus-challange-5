@@ -1,4 +1,4 @@
-# README for Explorer Bonus Challenge 5
+# Explorer Bonus Challenge 5
 
 ## Overview
 
